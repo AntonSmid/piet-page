@@ -30,6 +30,7 @@
             width: 300px;
             height: 300px;
             position: absolute;
+            transition: all 1s;
         }
         
         #box1 {
@@ -123,13 +124,22 @@
 $(".box").click(function(){
     width = 900*Math.random();
     height = 600*Math.random();
-    top = 600*Math.random()-50;
-    left = 900*Math.random()-50;
+    top = 600*Math.random()-100;
+    left = 900*Math.random()-100;
     
     red = Math.floor(255*Math.random());
     green = Math.floor(255*Math.random());
     blue = Math.floor(255*Math.random());
     trans = Math.random()+0.15;
+    
+     if ((top + height) < 0) {
+        top = 0;
+    }
+    
+    if ((left + width) < 0) {
+        left = 0;
+    }
+    
    /* 
     if ((width + left) > 900){
         left = 0;
