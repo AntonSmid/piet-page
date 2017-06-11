@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Randomnes</title>
+    <link href="https://fonts.googleapis.com/css?family=Jaldi|Titillium+Web:200" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     
+    <style>
+        body {
+            background-color: black; 
+            color: aliceblue;
+            text-align: center;
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 100;
+        }
+        
+        #canvas {
+            background: white;
+            margin: 0 auto;
+            width: 900px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+        
+        #box1 {
+            background: rgba(255, 0, 0, 0.8);
+            top: 0px;
+            left: 0px;
+        }
+        
+        #box2 {
+            background: rgba(255, 255, 0, 0.8);
+            top: 0px;
+            left: 300px;
+        }
+        
+        #box3 {
+            background: rgba(0, 0, 255, 0.8);
+            top: 0px;
+            left: 600px;
+        }
+        
+        #box4 {
+            background: rgba(255, 0, 0, 0.8);
+            top: 300px;
+            left: 000px;
+        }
+        
+        #box5 {
+            background: rgba(255, 255, 0, 0.8);
+            top: 300px;
+            left: 300px;
+        }
+        
+        #box6 {
+            background: rgba(0, 0, 255, 0.8);
+            top: 300px;
+            left: 600px;
+        }
+        
+        #box7 {
+            background: rgba(0, 0, 0, 0.8);
+            top: 150px;
+            left: 150px;
+        }
+        
+        #box8 {
+            background: rgba(0, 0, 0, 0.8);
+            top: 150px;
+            left: 450px;
+        }
+    
+    
+    
+        
+    </style>
+    
+</head>
+<body>
+    
+    <h1>Random picture generator N°1</h1>
+    
+    
+    
+    <div id="canvas">
+    
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+        <div id="box5" class="box"></div>
+        <div id="box6" class="box"></div>
+        <div id="box7" class="box"></div>
+        <div id="box8" class="box"></div>
+    
+    </div>
+    
+ <h2>Click it 'til you like it!</h2>
+<script type="text/javascript">
+ $(document).ready(function(){
+     
+$(".box").click(function(){
+    var width = 900*Math.random();
+    var height = 600*Math.random();
+    var top = 600*Math.random()-50;
+    var left = 900*Math.random()-50;
+    var red = Math.random();
+    var green = Math.random();
+    var blue = Math.random();
+    var trans = Math.random();
+
+    
+    $(this).css({'top': top, 'left': left, 'width': width, 'height': height});
+    
+    
+})     
+     
+     
+     
+ });   
+    
+    
+    
+    
+    
+    </script>
+    
+    
+    
+</body>
+</html>
